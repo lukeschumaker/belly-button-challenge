@@ -1,6 +1,6 @@
 let url = 'https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json'
 
-function discplayCharts(id) {
+function displayCharts(id) {
     console.log(id);
 
    // Fetch data:
@@ -12,6 +12,8 @@ function discplayCharts(id) {
         console.log(samples);
 
         // Filter the data to get the sample values, otu_ids and otu_labels for the selected ID
+
+       
 
         let selectedSample = samples.filter(sample => sample.id ==id);
 
@@ -159,7 +161,7 @@ function optionChanged(selectedId) {
 
     console.log(selectedId);
 
-    discplayCharts(selectedId);
+    displayCharts(selectedId);
 
     //Because we do not have access to data we need to fetch it again
     //Anything we do with the data needs to be inside this promise
@@ -189,7 +191,7 @@ function init () {
 
         //Display the charts and panel with the first ID
 
-        discplayCharts(first);
+        displayCharts(first);
 
     });
 }
